@@ -23,7 +23,7 @@ configure_monitors() {
     done
 
     # Set the same wallpaper for all monitors
-    feh --bg-scale ~/Pictures/wallpaper/1.png
+    feh --bg-scale ~/Pictures/
 }
 
 # Initial configuration of monitors
