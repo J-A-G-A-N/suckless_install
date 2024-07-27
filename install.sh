@@ -3,14 +3,14 @@
 # Function to install packages for Arch Linux
 install_arch_packages() {
     echo "Installing packages for Arch Linux..."
-    sudo pacman -S make wget meson ninja base-devel libx11 libxft libxinerama xorg-xrandr xorg-xdpyinfo xinitrc xorg xorg-server xorg-xauth
+    sudo pacman -S make alacritty wget meson ninja base-devel libx11 libxft libxinerama xorg-xrandr xorg-xdpyinfo xinitrc xorg xorg-server xorg-xauth
 
 }
 
 # Function to install packages for Ubuntu/Debian
 install_ubuntu_packages() {
     echo "Installing packages for Ubuntu/Debian..."
-    sudo apt-get make wget meson ninja-build build-essential install xorg xorg-server xinitrc libx11-dev libxft-dev libxinerama-dev x11-utils
+    sudo apt-get make alacritty wget meson ninja-build build-essential install xorg xorg-server xinitrc libx11-dev libxft-dev libxinerama-dev x11-utils
 }
 
 install_picom(){
