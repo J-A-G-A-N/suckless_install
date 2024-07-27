@@ -4,7 +4,7 @@
 const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
-static const char unknown_str[] = "n/a";
+static const char unknown_str[] = "N/A";
 
 
 /* maximum output string length */
@@ -76,7 +76,7 @@ static const struct arg args[] = {
     { ram_used,                       "::%s/",                        NULL    },
     { ram_total,                       "%s|",                         NULL     },
 	{ wifi_perc,                     " :%s%%",                      "wlp5s0"  },
-    { netspeed_rx,                   "  %s",                          "wlp5s0"  },
+    { netspeed_rx,                   "  %s ",                          "wlp5s0"  },
 	{ wifi_essid,                     "%s|",                        "wlp5s0"  },
  
 };

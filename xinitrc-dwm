@@ -1,0 +1,8 @@
+picom --experimental-backend &
+slstatus &
+/home/<user-name>/suckless/autorun/volume_control &
+/home/<user-name>/suckless/autorun/display.sh &
+/home/<user-name>/suckless/autorun/brightness &
+exec dwm
+
+

@@ -45,6 +45,7 @@ typedef struct {
 	signed char appcursor; /* application cursor */
 } Key;
 
+#define COLORFILE "./st-colors.h"
 /* X modifiers */
 #define XK_ANY_MOD    UINT_MAX
 #define XK_NO_MOD     0
@@ -141,6 +142,7 @@ typedef struct {
 	GC gc;
 } DC;
 
+static int load_colors(void);
 static inline ushort sixd_to_16bit(int);
 static int xmakeglyphfontspecs(XftGlyphFontSpec *, const Glyph *, int, int, int);
 static void xdrawglyphfontspecs(const XftGlyphFontSpec *, Glyph, int, int, int);
@@ -854,6 +856,10 @@ xsetcolorname(int x, const char *name)
 	return 0;
 }
 
+
+void reload_colors(void);
+
+
 /*
  * Absolute coordinates.
  */
@@ -1058,6 +1064,8 @@ xloadfonts(const char *fontstr, double fontsize)
 
 	FcPatternDestroy(pattern);
 }
+
+
 
 void
 xunloadfont(Font *f)
@@ -1522,6 +1530,8 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
 	/* Reset clip to none. */
 	XftDrawSetClip(xw.draw, 0);
 }
+
+void reload_colors(void);
 
 void
 xdrawglyph(Glyph g, int x, int y)
